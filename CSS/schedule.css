@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+/*DAY 1 CONTAINER*/
+.day-1-parent {
+  width: 100%;
+  height: 313px;
+  position: relative;
+  text-align: left;
+  font-size: 36px;
+  color: #000;
+  font-family: Montserrat;
+}
+/*DAY 1 title*/
+.day-1-title {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: "EB Garamond";
+}
+/*DAY 1 description*/
+.day1-description {
+  position: absolute;
+  top: 50px;
+  left: 62px;
+  font-size: 16px;
+  line-height: 32px;
+  display: inline-block;
+  width: 774px;
+}
+/*DAY 1 HOURS CONTAINER*/
+.hours-day1 {
+  position: absolute;
+  top: 50px;
+  left: 3px;
+  font-size: 18px;
+  line-height: 32px;
+  display: inline-block;
+  width: 47px;
+  height: 263px;
+}
