@@ -11,55 +11,97 @@
     />
     <!--CSS files-->
     <link rel="stylesheet" href="CSS/home.css" />
+    <link rel="stylesheet" href="CSS/schedule.css" />
+    <!--JS files-->
+    <script src="JS/mainpage-mobilemenu.js" defer></script>
   </head>
   <body>
+    <!--HEADER-->
     <header>
-      <nav class="site-nav">
-        <ul class="header1">
-          <li>
-            <a href="index.html"
-              ><img
-                src="images/main-logotype-and-icon 1.svg"
-                alt="Logo"
-                id="logo"
-            /></a>
-          </li>
-          <li class="home">
-            <a href="index.html">Home</a>
-          </li>
-          <li class="schedule">
-            <a href="schedule.html">Schedule</a>
-          </li>
-          <li class="tickets">
-            <a href="tickets.html">Tickets</a>
-          </li>
-          <li>
-            <a href="Cart.html"
-              ><img
-                src="images/shopping-cart.svg"
-                alt="Shopping Cart icon"
-                id="Cart-icon"
-            /></a>
-          </li>
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a
+          href="index.html"
+          class="nav-logo"
+          aria-label="Between the Lines – Home"
+          ><img
+            src="images/main-logotype-and-icon 1.svg"
+            alt="Logo"
+            id="logo"
+          />
+        </a>
+
+        <!-- Desktop version links -->
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
         </ul>
+
+        <!-- Desktop cart -->
+        <a href="cart.html" class="nav-cart" aria-label="Shopping cart"
+          ><img
+            src="images/shopping-cart.svg"
+            alt="Shopping Cart icon"
+            id="Cart-icon"
+          />
+        </a>
+
+        <!-- Ham -->
+        <button
+          class="nav-hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          onclick="openMenu()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </header>
+
+    <!-- MOBILE MENU -->
+    <div
+      class="mobile-menu"
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+    >
+      <div class="mobile-menu-header">
+        <button
+          class="mobile-menu-close"
+          aria-label="Close menu"
+          onclick="closeMenu()"
+        >
+          X
+        </button>
+      </div>
+      <nav class="mobile-menu-links" aria-label="Mobile navigation">
+        <a href="index.html" onclick="closeMenu()">Home</a>
+        <a href="schedule.html" onclick="closeMenu()">Schedule</a>
+        <a href="tickets.html" onclick="closeMenu()">Tickets</a>
+        <a href="#contact" onclick="closeMenu()">Contact us</a>
+        <a href="cart.html" onclick="closeMenu()">Shopping cart</a>
+      </nav>
+    </div>
     <main>
       <h1>SCHEDULE</h1>
+      <ul></ul>
     </main>
+    <!--FOOTER-->
     <footer>
-      <div class="footer-container">
-        <ul>
-          <nav class="footer-content">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="tickets.html">Tickets</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li class="copyr">®Between The Lines 2026</li>
-          </nav>
-        </ul>
+      <div class="footer-inner">
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="schedule.html">Schedule</a>
+          <a href="tickets.html">Tickets</a>
+          <a href="#contact">Contact us</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Service</a>
+          <span class="footer-copyright">©Between the Lines, 2026.</span>
+        </nav>
       </div>
     </footer>
   </body>
