@@ -2,6 +2,20 @@ h1 {
   width: max(80vw);
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "EB Garamond", serif;
+  font-weight: 700;
+}
+
 .ticket-cards-container {
   padding: 1rem;
   display: flex;
