@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Between The Lines</title>
+
+    <!--Logo font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--CSS files-->
+    <link rel="stylesheet" href="CSS/home.css" />
+    <link rel="stylesheet" href="CSS/tickets.css" />
+
+    <!--JS files-->
+    <script src="JS/mainpage-mobilemenu.js" defer></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a
+          href="index.html"
+          class="nav-logo"
+          aria-label="Between the Lines – Home"
+          ><img
+            src="images/main-logotype-and-icon 1.svg"
+            alt="Logo"
+            id="logo"
+          />
+        </a>
+
+        <!-- Desktop version links -->
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+        </ul>
+
+        <!-- Desktop cart -->
+        <a href="cart.html" class="nav-cart" aria-label="Shopping cart"
+          ><img
+            src="images/shopping-cart.svg"
+            alt="Shopping Cart icon"
+            id="Cart-icon"
+          />
+        </a>
+
+        <!-- Ham -->
+        <button
+          class="nav-hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          onclick="openMenu()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div
+      class="mobile-menu"
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+    >
+      <div class="mobile-menu-header">
+        <button
+          class="mobile-menu-close"
+          aria-label="Close menu"
+          onclick="closeMenu()"
+        >
+          X
+        </button>
+      </div>
+      <nav class="mobile-menu-links" aria-label="Mobile navigation">
+        <a href="index.html" onclick="closeMenu()">Home</a>
+        <a href="schedule.html" onclick="closeMenu()">Schedule</a>
+        <a href="tickets.html" onclick="closeMenu()">Tickets</a>
+        <a href="#contact" onclick="closeMenu()">Contact us</a>
+        <a href="cart.html" onclick="closeMenu()">Shopping cart</a>
+      </nav>
+    </div>
+
+    <main>
+      <div class="ticket-cards-container">
+        <h1>TICKET OPTIONS</h1>
+        <div class="ticket-cards">
+          <!--DAY 1-->
+          <div class="ticket-card">
+            <img
+              src="images/BOOK 2 3.png"
+              alt="A pile of books on a stand at the Between the Lines event"
+            />
+            <div class="ticket-texts">
+              <h2 class="ticket-title">DAY 1</h2>
+              <p>Get access to all Day 1 activities, from 9:00 to 18:00</p>
+              <p>$100.00</p>
+              <button class="btn-ticket">Buy Tickets</button>
+            </div>
+          </div>
+
+          <!--DAY 2-->
+          <div class="ticket-card">
+            <img
+              src="images/day2.png"
+              alt="People queuing for an author's signing at the Between the Lines event"
+            />
+            <div class="ticket-texts">
+              <h2 class="ticket-title">DAY 2</h2>
+              <p>Get access to all Day 2 activities, from 9:00 to 18:00</p>
+              <p>$100.00</p>
+              <button class="btn-ticket">Buy Tickets</button>
+            </div>
+          </div>
+
+          <!--DAY 1 & 2-->
+          <div class="ticket-card">
+            <img
+              src="images/day2.png"
+              alt="Crowd and stands at the Between the Lines event"
+            />
+            <div class="ticket-texts">
+              <h2 class="ticket-title">DAY 1 & 2</h2>
+              <p>
+                Get access to all Day 1 and Day 2 activities, from 9:00 to
+                18:00. Get the special event kit that contains a tote bag, book
+                separator and participate in the raffle to win a book nook.
+              </p>
+              <p>$170.00</p>
+              <button class="btn-ticket">Buy Tickets</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+      <div class="footer-inner">
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="schedule.html">Schedule</a>
+          <a href="tickets.html">Tickets</a>
+          <a href="#contact">Contact us</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Service</a>
+          <span class="footer-copyright">©Between the Lines, 2026.</span>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
