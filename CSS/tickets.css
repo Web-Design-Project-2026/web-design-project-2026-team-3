@@ -52,3 +52,15 @@ h1 {
 .btn-ticket:hover {
   background: var(--purple-dark);
 }
+
+/* RESPONSIVENESS FOR MOBILE */
+@media (max-width: 750px) {
+  .ticket-card {
+    flex-direction: column;
+    width: 80vw;
+    align-items: flex-start;
+  }
+  img {
+    width: 80vw;
+  }
+}
