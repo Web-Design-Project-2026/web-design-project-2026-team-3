@@ -1,27 +1,43 @@
+/* TEXT STYLES */
+
 h1 {
-  width: max(80vw);
+  font-size: 48px;
+  line-height: normal;
+}
+
+h2 {
+  /* font-size: 36px; */
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--text);
-  line-height: 1.6;
   overflow-x: hidden;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "EB Garamond", serif;
+  font-family: "Garamond", serif;
   font-weight: 700;
 }
 
+.ticket-card p {
+  line-height: 1.6rem;
+}
+
+/* MAIN CONTENTS */
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
 .ticket-cards-container {
-  padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2.4rem;
+  gap: 50px;
 }
 
 .ticket-cards {
@@ -29,6 +45,8 @@ h3 {
   flex-direction: column;
   gap: 1.2rem;
 }
+
+/* INDIVIDUAL TICKET CARDS */
 
 .ticket-card {
   background: var(--white);
@@ -39,7 +57,6 @@ h3 {
   gap: 1.2rem;
   padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  width: max(80vw);
 }
 
 .ticket-texts {
@@ -69,12 +86,25 @@ h3 {
 
 /* RESPONSIVENESS FOR MOBILE */
 @media (max-width: 750px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  main {
+    padding: 25px 16px;
+  }
+
+  .ticket-cards-container {
+    gap: 35px;
+  }
+
   .ticket-card {
     flex-direction: column;
     width: 80vw;
     align-items: flex-start;
   }
+
   img {
-    width: 80vw;
+    width: stretch;
   }
 }
