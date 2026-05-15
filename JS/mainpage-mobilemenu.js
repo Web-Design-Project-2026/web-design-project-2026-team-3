@@ -1,9 +1,9 @@
 function openMenu() {
   var menu = document.getElementById("mobile-menu");
   menu.classList.add("open");
-  document.body.style.overflow = "hidden"; // prevent background scroll
-  // Update aria-expanded on hamburger
-  document
+  document.body.style.overflow = "hidden"; // NO background  to scroll
+
+  // aria-epanded update
     .querySelector(".nav-hamburger")
     .setAttribute("aria-expanded", "true");
 }

@@ -1,4 +1,4 @@
-var eventDate = new Date(2026, 9, 1, 9, 0, 0); // atm set as 1 Oct 2026, 09:00
+var eventDate = new Date(2026, 9, 1, 9, 0, 0); // atm set as 1 oct 2026, 09:00
 
 function updateCountdown() {
   var now = new Date();
@@ -30,4 +30,4 @@ function updateCountdown() {
 }
 
 updateCountdown();
-setInterval(updateCountdown, 60000); // means updating every minute
+setInterval(updateCountdown, 60000);
