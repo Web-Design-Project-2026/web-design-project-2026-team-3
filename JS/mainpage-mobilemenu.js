@@ -4,6 +4,7 @@ function openMenu() {
   document.body.style.overflow = "hidden"; // NO background  to scroll
 
   // aria-epanded update
+  document
     .querySelector(".nav-hamburger")
     .setAttribute("aria-expanded", "true");
 }

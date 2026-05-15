@@ -26,7 +26,6 @@ ul {
   list-style: none;
 }
 /* HEADER */
-/* FIX NAV LINK LAYOUT LATER ALIGN CENTER!!! */
 
 header {
   position: sticky;
@@ -56,6 +55,14 @@ header {
 }
 
 /* Desktop nav links */
+
+.nav-logo .logo-mobile {
+  display: none;
+}
+.nav-logo .logo-desktop {
+  display: block;
+}
+
 .nav-links {
   grid-column: 2;
   justify-self: center;
@@ -212,6 +219,17 @@ footer {
 
 /*  RESPONSIVENESS MOBILE */
 @media (max-width: 640px) {
+  /* Mobile logo & hide desktop */
+
+  .nav-logo .logo-desktop {
+    display: none;
+  }
+
+  .nav-logo .logo-mobile {
+    display: block;
+    height: 36px;
+    width: auto;
+  }
   /* Hide desktop nav & show ham */
   .nav-links,
   .nav-cart {
