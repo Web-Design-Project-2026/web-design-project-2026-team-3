@@ -3,6 +3,7 @@ body {
   line-height: normal;
   font-family: "Montserrat", sans-serif;
   font-size: 100%; /* base size */
+  color: var(--text);
 }
 
 /* MAIN CONTENT */
@@ -37,7 +38,7 @@ h1 {
   align-items: flex-start;
   gap: 1.25rem; /* 20px */
   margin-bottom: 1.125rem; /* 18px */
-  border-bottom: 0.0625rem solid #e0e0e0; /* 1px */
+  border-bottom: 0.0625rem solid var(--gray-mid); /* 1px */
 }
 
 /* HOURS */
@@ -76,7 +77,7 @@ h1 {
     gap: 0.625rem; /* 10px */
     margin-bottom: 1.5rem; /* 24px */
     padding-bottom: 1rem; /* 16px */
-    border-bottom: 0.0625rem solid #dcdcdc;
+    border-bottom: 0.0625rem solid var(--gray-mid);
   }
 
   .hours {
