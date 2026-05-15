@@ -4,7 +4,9 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-
+main {
+  background-color: color-mix(in srgb, var(--text) 2%, transparent);
+}
 h1,
 h2,
 h3 {
