@@ -14,7 +14,7 @@
   --black: #000000;
   --gray-light: #f5f5f5;
   --gray-mid: #e0e0e0;
-  --text: #1a1a1a;
+  --text: #000000;
 }
 
 a {
@@ -46,7 +46,7 @@ header {
   margin: 0 auto;
 }
 .nav-logo {
-  grid-column: 1; /* first column */
+  grid-column: 1;
   justify-self: start;
 }
 
@@ -57,7 +57,7 @@ header {
 
 /* Desktop nav links */
 .nav-links {
-  grid-column: 2; /* middle column */
+  grid-column: 2;
   justify-self: center;
   display: flex;
   align-items: center;
@@ -101,7 +101,7 @@ header {
   padding: 4px;
 }
 
-/* The three span lines hamb button */
+/* span lines hamb btn */
 .nav-hamburger span {
   display: block;
   width: 24px;
@@ -110,7 +110,7 @@ header {
   background: var(--black);
 }
 
-/* the Mobile overlay menu */
+/* mobile overlay menu */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -190,7 +190,7 @@ footer {
   margin: 0 auto;
 }
 
-/* D footer one row */
+/* Desktop footer one row */
 .footer-links {
   display: flex;
   justify-content: space-between;
@@ -222,7 +222,7 @@ footer {
     display: flex;
   }
 
-  /* M footer 2 col */
+  /* Mobile footer 2 col */
   .footer-links {
     display: grid;
     grid-template-columns: 1fr 1fr;

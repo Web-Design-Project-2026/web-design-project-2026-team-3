@@ -17,6 +17,7 @@
 
     <!--JS files-->
     <script src="JS/mainpage-mobilemenu.js" defer></script>
+    <script src="JS/addToCart.js" defer></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -25,7 +26,7 @@
         <a
           href="index.html"
           class="nav-logo"
-          aria-label="Between the Lines – Home"
+          aria-label="Between the Lines, Home"
           ><img
             src="images/main-logotype-and-icon 1.svg"
             alt="Logo"
@@ -41,7 +42,7 @@
         </ul>
 
         <!-- Desktop cart -->
-        <a href="cart.html" class="nav-cart" aria-label="Shopping cart"
+        <a href="shoppingCart.html" class="nav-cart" aria-label="Shopping cart"
           ><img
             src="images/shopping-cart.svg"
             alt="Shopping Cart icon"
@@ -86,7 +87,7 @@
         <a href="schedule.html" onclick="closeMenu()">Schedule</a>
         <a href="tickets.html" onclick="closeMenu()">Tickets</a>
         <a href="#contact" onclick="closeMenu()">Contact us</a>
-        <a href="cart.html" onclick="closeMenu()">Shopping cart</a>
+        <a href="shoppingCart.html" onclick="closeMenu()">Shopping cart</a>
       </nav>
     </div>
 
@@ -104,7 +105,21 @@
               <h2 class="ticket-title">DAY 1</h2>
               <p>Get access to all Day 1 activities, from 9:00 to 18:00</p>
               <p>$100.00</p>
-              <button class="btn-ticket">Buy Tickets</button>
+              <button
+                class="btn-ticket"
+                onclick="
+                  addToCart({
+                    id: 'day1',
+                    name: 'DAY 1',
+                    description:
+                      'Get access to all Day 1 activities, from 9:00 to 18:00',
+                    price: 100.0,
+                    image: 'images/BOOK 2 3.png',
+                  })
+                "
+              >
+                Buy Tickets
+              </button>
             </div>
           </div>
 
@@ -118,7 +133,21 @@
               <h2 class="ticket-title">DAY 2</h2>
               <p>Get access to all Day 2 activities, from 9:00 to 18:00</p>
               <p>$100.00</p>
-              <button class="btn-ticket">Buy Tickets</button>
+              <button
+                class="btn-ticket"
+                onclick="
+                  addToCart({
+                    id: 'day2',
+                    name: 'DAY 2',
+                    description:
+                      'Get access to all Day 2 activities, from 9:00 to 18:00',
+                    price: 100.0,
+                    image: 'images/day2.png',
+                  })
+                "
+              >
+                Buy Tickets
+              </button>
             </div>
           </div>
 
@@ -136,7 +165,21 @@
                 separator and participate in the raffle to win a book nook.
               </p>
               <p>$170.00</p>
-              <button class="btn-ticket">Buy Tickets</button>
+              <button
+                class="btn-ticket"
+                onclick="
+                  addToCart({
+                    id: 'day1and2',
+                    name: 'DAY 1 & 2',
+                    description:
+                      'Get access to all Day 1 and Day 2 activities, from 9:00 to 18:00. Get the special event kit that contains a tote bag, book separator and participate in the raffle to win a book nook.',
+                    price: 170.0,
+                    image: 'images/day2.png',
+                  })
+                "
+              >
+                Buy Tickets
+              </button>
             </div>
           </div>
         </div>
