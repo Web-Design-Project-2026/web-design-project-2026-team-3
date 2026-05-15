@@ -13,82 +13,45 @@ main {
 
 h1 {
   font-family: "EB Garamond", serif;
-  font-size: 2.25rem; /* 36px */
-  margin-bottom: 3.125rem; /* 50px */
+  font-size: 2.25rem;
+  margin-bottom: 3.125rem;
 }
 
 /* DAY CONTAINERS */
 .day-1-parent,
 .day-2-parent {
-  margin-bottom: 3.75rem; /* 60px */
+  margin-bottom: 3.75rem;
 }
 
 /* DAY TITLES */
 .day-title,
 .day2-title {
   font-family: "EB Garamond", serif;
-  font-size: 2.25rem; /* 36px */
-  margin-bottom: 1.5625rem; /* 25px */
+  font-size: 2.25rem;
+  margin-bottom: 1.5625rem;
 }
 
 /* SCHEDULE ROW */
 .schedule-row {
   display: flex;
   align-items: flex-start;
-  gap: 1.25rem; /* 20px */
-  margin-bottom: 1.125rem; /* 18px */
-  border-bottom: 0.0625rem solid #e0e0e0; /* 1px */
+  gap: 1.25rem;
+  margin-bottom: 1.125rem;
+  border-bottom: 0.0625rem solid #e0e0e0;
 }
 
 /* HOURS */
 .hours {
-  min-width: 4.375rem; /* 70px */
-  font-size: 1.125rem; /* 18px */
+  min-width: 4.375rem;
+  font-size: 1.125rem;
 }
 
 /* DESCRIPTION */
 .description {
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
   line-height: 1.8;
 }
 
-/* MOBILE RESPONSIVE 750px */
-@media (max-width: 46.875rem) {
-  /* 750px */
-  main {
-    padding: 1.5625rem 1rem; /* 25px 16px */
-  }
-
-  h1 {
-    font-size: 2.25rem; /* 36px */
-    margin-bottom: 2.1875rem; /* 35px */
-  }
-
-  .day-title,
-  .day2-title {
-    font-size: 1.75rem; /* 28px */
-    margin-bottom: 1.25rem; /* 20px */
-    text-align: start;
-  }
-
-  .schedule-row {
-    flex-direction: row;
-    gap: 0.625rem; /* 10px */
-    margin-bottom: 1.5rem; /* 24px */
-    padding-bottom: 1rem; /* 16px */
-    border-bottom: 0.0625rem solid #dcdcdc;
-  }
-
-  .hours {
-    min-width: auto;
-    font-size: 1rem; /* 16px */
-  }
-
-  .description {
-    font-size: 0.9375rem; /* 15px */
-    line-height: 1.6;
-  }
-}
 /* TICKETS BUTTON */
 .tickets-cta {
   text-align: start;
@@ -113,4 +76,95 @@ h1 {
 
 .btn-tickets:hover {
   background: var(--purple-dark);
+}
+/*Responsive */
+/*TABLET */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .day-title,
+  .day2-title {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .day-1-parent,
+  .day-2-parent {
+    margin-bottom: 3rem;
+  }
+
+  .schedule-row {
+    gap: 1rem;
+  }
+
+  .hours {
+    min-width: 4rem;
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9375rem;
+  }
+
+  .tickets-cta {
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+/* Mobile*/
+@media (max-width: 600px) {
+  main {
+    margin: 4% 5%;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .day-title,
+  .day2-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .day-1-parent,
+  .day-2-parent {
+    margin-bottom: 2.25rem;
+  }
+
+  /* Hour and description */
+  .schedule-row {
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .hours {
+    min-width: unset;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #555;
+  }
+
+  .description {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  .tickets-cta {
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+
+  .btn-tickets {
+    width: 100%;
+    text-align: center;
+    padding: 0.85rem 1rem;
+    font-size: 0.9375rem;
+  }
 }
