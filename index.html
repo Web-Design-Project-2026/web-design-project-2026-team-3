@@ -20,6 +20,7 @@
 
     <!--JS files-->
     <script src="JS/mainpage-mobilemenu.js" defer></script>
+    <script src="JS/slideShow.js" defer></script>
     <script src="JS/countdown.js" defer></script>
   </head>
   <body>
@@ -105,10 +106,43 @@
     <main>
       <!-- Hero/main image -->
       <section class="hero" aria-label="Event photo">
-        <img
-          src="images/BOOK1 1 (1).png"
-          alt="People browsing book stands at the Between the Lines event"
-        />
+        <!-- the slides -->
+        <div class="slides">
+          <img
+            src="images/main.jpg"
+            alt="Event photo - Scene 1"
+            class="slide active"
+          />
+          <img
+            src="images/Main3.jpg"
+            alt="Event photo - Scene 2"
+            class="slide"
+          />
+          <img
+            src="images/Main4.jpg"
+            alt="Event photo - Scene 3"
+            class="slide"
+          />
+          <img
+            src="images/Main5.jpg"
+            alt="Event photo - Scene 4"
+            class="slide"
+          />
+        </div>
+
+        <!-- left and right arrow buttons -->
+        <button class="slide-btn slide-prev" aria-label="Previous image">
+          <
+        </button>
+        <button class="slide-btn slide-next" aria-label="Next image">></button>
+
+        <!-- dots at the bottom -->
+        <div class="slide-dots">
+          <button class="dot active" aria-label="Go to slide 1"></button>
+          <button class="dot" aria-label="Go to slide 2"></button>
+          <button class="dot" aria-label="Go to slide 3"></button>
+          <button class="dot" aria-label="Go to slide 4"></button>
+        </div>
       </section>
 
       <!-- About -->
