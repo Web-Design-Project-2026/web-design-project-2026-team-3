@@ -3,6 +3,7 @@ body {
   line-height: normal;
   font-family: "Montserrat", sans-serif;
   font-size: 100%; /* base size */
+  color: var(--text);
 }
 
 /* MAIN CONTENT */
@@ -29,9 +30,9 @@ main {
 .schedule-row {
   display: flex;
   align-items: flex-start;
-  gap: 1.25rem;
-  margin-bottom: 1.125rem;
-  border-bottom: 0.0625rem solid #e0e0e0;
+  gap: 1.25rem; /* 20px */
+  margin-bottom: 1.125rem; /* 18px */
+  border-bottom: 0.0625rem solid var(--gray-mid); /* 1px */
 }
 
 /* HOURS */
