@@ -7,7 +7,9 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
+main {
+  background-color: color-mix(in srgb, var(--text) 2%, transparent);
+}
 h1,
 h2,
 h3 {

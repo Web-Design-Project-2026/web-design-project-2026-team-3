@@ -145,6 +145,7 @@ main {
     min-width: unset;
     font-size: 0.875rem;
     font-weight: 600;
+    color: #555;
   }
 
   .description {
