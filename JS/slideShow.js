@@ -47,5 +47,5 @@ function startTimer() {
 function resetTimer() {
   clearInterval(timer);
   startTimer();
-  startTimer();
 }
+startTimer();
