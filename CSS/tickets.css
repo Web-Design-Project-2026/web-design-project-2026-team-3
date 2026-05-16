@@ -13,6 +13,7 @@ body {
   font-family: "Montserrat", sans-serif;
   color: var(--text);
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 h1,

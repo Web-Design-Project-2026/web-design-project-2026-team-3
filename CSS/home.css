@@ -3,6 +3,7 @@ body {
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
+  font-weight: 500;
 }
 main {
   background-color: color-mix(in srgb, var(--text) 2%, transparent);
@@ -10,7 +11,7 @@ main {
 h1,
 h2,
 h3 {
-  font-family: "EB Garamond", serif;
+  font-family: "Garamond", serif;
   font-weight: 700;
 }
 
@@ -34,6 +35,9 @@ img {
   height: 300px;
   overflow: hidden;
   position: relative;
+}
+.hero img {
+  height: 300px;
 }
 
 /* all slides sit on top of each other, hidden by default */
@@ -122,14 +126,13 @@ img {
 
 .about p {
   font-size: 0.92rem;
-  color: #333;
   line-height: 1.7;
 }
 
 /* Day Cards*/
 /* fix color, shadow, button later*/
 .day-cards {
-  max-width: 600px;
+  max-width: 700px;
   margin: 1.5rem auto;
   padding: 0 1.5rem;
   display: flex;
@@ -149,21 +152,33 @@ img {
 }
 
 .day-card img {
-  width: 100px;
-  height: 80px;
+  width: 180px;
+  height: 130px;
   object-fit: cover;
   border-radius: 4px;
   flex-shrink: 0;
 }
 
+.day-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  flex: 1;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
 .day-card-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  font-family: "EB Garamond", serif;
+  font-size: 1.5rem;
+
+  margin: 0;
 }
 
 .day-card-content p {
   font-size: 0.85rem;
-  color: #555;
+  color: color-mix(in srgb, var(--text) 85%, transparent);
   margin-bottom: 0.7rem;
 }
 
@@ -179,6 +194,8 @@ img {
   cursor: pointer;
   letter-spacing: 0.03em;
   transition: background 0.2s;
+  align-self: bottom;
+  margin-top: 0.3rem;
 }
 
 .btn-schedule:hover {
@@ -218,7 +235,7 @@ img {
 }
 
 .countdown-section h2 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   margin-bottom: 1.2rem;
 }
 
@@ -236,24 +253,25 @@ img {
 
 .countdown-number {
   font-family: "EB Garamond", serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1;
 }
 
 .countdown-label {
-  font-size: 0.85rem;
-  color: #555;
+  font-size: auto;
+  color: color-mix(in srgb, var(--text) 85%, transparent);
   margin-top: 0.2rem;
 }
 
 /* RESPONSIVENESS MOBILE */
 @media (max-width: 640px) {
-  .hero img {
+  .hero {
     height: 240px;
   }
 
-  .about h1 {
+  .about h1,
+  .countdown-section h2 {
     font-size: 1.7rem;
   }
 
