@@ -1,7 +1,7 @@
 /* TEXT STYLES */
 
 h1 {
-  font-size: 48px;
+  font-size: 3rem;
   line-height: normal;
 }
 
@@ -10,6 +10,7 @@ body {
   color: var(--text);
   overflow-x: hidden;
   line-height: 1.6;
+  font-size: 100% /* base size */;
 }
 
 h1,
@@ -28,14 +29,14 @@ h3 {
 main {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   background-color: color-mix(in srgb, var(--text) 2%, transparent);
 }
 
 .ticket-cards-container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 3.125rem;
 }
 
 .ticket-cards {
@@ -99,15 +100,15 @@ main {
 /* RESPONSIVENESS FOR MOBILE */
 @media (max-width: 760px) {
   h1 {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 
   main {
-    padding: 25px 16px;
+    padding: 1.5625rem 1rem;
   }
 
   .ticket-cards-container {
-    gap: 35px;
+    gap: 2.1875rem;
   }
 
   .ticket-card {
