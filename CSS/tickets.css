@@ -105,6 +105,7 @@ main {
 
   main {
     padding: 1.5625rem 1rem;
+    justify-items: center;
   }
 
   .ticket-cards-container {
