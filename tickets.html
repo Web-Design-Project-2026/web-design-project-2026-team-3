@@ -6,10 +6,10 @@
     <title>Between The Lines</title>
 
     <!--Logo font-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Montserrat:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 
     <!--CSS files-->
     <link rel="stylesheet" href="CSS/header-footer.css" />
@@ -100,21 +100,26 @@
 
     <main>
       <div class="ticket-cards-container">
-        <h1>Ticket Options</h1>
+       
+        <span class="subheader" aria-label="text: Secure your spot"
+          >SECURE YOUR SPOT</span
+        >
+        <h2>Ticket Options</h2>
+      </div>
         <div class="ticket-cards">
           <!--DAY 1-->
           <div class="ticket-card">
-            <div class="card-img-container">
-              <img
-                src="images/BOOK 2.jpg"
-                alt="A pile of books on a stand at the Between the Lines event"
-              />
-            </div>
             <div class="ticket-texts">
-              <h2 class="ticket-title">DAY 1</h2>
+               <div class="card-header-row">
+              <h3 class="ticket-title">DAY 1 TICKET</h3>
+              <span class="badge-date" aria-label="Event date November 14th"
+                >NOV 14</span
+              >
+              </div>
               <p>Get access to all Day 1 activities, from 9:00 to 18:00</p>
               <p>$100.00</p>
-              <button
+            </div>
+             <button
                 class="btn-ticket"
                 onclick="
                   addToCart({
@@ -123,27 +128,30 @@
                     description:
                       'Get access to all Day 1 activities, from 9:00 to 18:00',
                     price: 100.0,
-                    image: 'images/BOOK 2 3.png',
                   })
                 "
               >
-                Buy Tickets
+                Add to cart <img
+            src="images/shopping-cart.svg"
+            alt="Shopping Cart icon"
+            id="Cart-icon"
+          />
               </button>
-            </div>
           </div>
 
           <!--DAY 2-->
           <div class="ticket-card">
-            <div class="card-img-container">
-              <img
-                src="images/BOOK 3.webp"
-                alt="People queuing for an author's signing at the Between the Lines event"
-              />
-            </div>
+            
             <div class="ticket-texts">
-              <h2 class="ticket-title">DAY 2</h2>
+              <div class="card-header-row">
+              <h3 class="ticket-title">DAY 2 TICKET</h3>
+              <span class="badge-date" aria-label="Event date November 15th"
+                >NOV 15</span
+              >
+              </div>
               <p>Get access to all Day 2 activities, from 9:00 to 18:00</p>
               <p>$100.00</p>
+               </div>
               <button
                 class="btn-ticket"
                 onclick="
@@ -157,27 +165,34 @@
                   })
                 "
               >
-                Buy Tickets
+                Add to cart <img
+            src="images/shopping-cart.svg" alt="Shopping Cart icon"
+            id="Cart-icon" />
               </button>
-            </div>
+           
           </div>
 
           <!--DAY 1 & 2-->
-          <div class="ticket-card">
-            <div class="card-img-container">
-              <img
-                src="images/BOOK 4.png"
-                alt="Crowd and stands at the Between the Lines event"
-              />
-            </div>
+          
+          <div class="ticket-card ticket-card--recommended">
+            <span
+                class="badge-recommended"
+                aria-label="Recommended ticket option"
+                >RECOMMENDED</span
+              >
+          
             <div class="ticket-texts">
-              <h2 class="ticket-title">DAY 1 & 2</h2>
+              <div class="card-header-row">
+      
+              <h3 class="ticket-title">DAY 1 AND 2 TICKET PACKAGE </h3>
+             </div>
               <p>
                 Get access to all Day 1 and Day 2 activities, from 9:00 to
                 18:00. Get the special event kit that contains a tote bag, book
                 separator and participate in the raffle to win a book nook.
               </p>
               <p>$170.00</p>
+               </div>
               <button
                 class="btn-ticket"
                 onclick="
@@ -187,14 +202,15 @@
                     description:
                       'Get access to all Day 1 and Day 2 activities, from 9:00 to 18:00. Get the special event kit that contains a tote bag, book separator and participate in the raffle to win a book nook.',
                     price: 170.0,
-                    image: 'images/day2.png',
                   })
                 "
               >
-                Buy Tickets
-              </button>
-            </div>
+                Add to cart <img
+            src="images/shopping-cart.svg" alt="Shopping Cart icon"
+            id="Cart-icon"/>   
+                </button>
           </div>
+          
         </div>
       </div>
     </main>
