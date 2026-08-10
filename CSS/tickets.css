@@ -1,14 +1,16 @@
 /* TEXT STYLES */
 
---purple: #4a266e; /*button&footer main purple*/
---purple-dark: #330c57; /*button hover & pressed*/
---white: #ffffff;
---black: #000000;
---gray-light: #f5f5f5;
---gray-mid: #e0e0e0;
---text: #4b444f;
---paper-white: #fdfcf8; /* main backgroundcolor*/
---yellow: #d4af37;
+:root {
+  --purple: #4a266e; /*button&footer main purple*/
+  --purple-dark: #330c57; /*button hover & pressed*/
+  --white: #ffffff;
+  --black: #000000;
+  --gray-light: #f5f5f5;
+  --gray-mid: #e0e0e0;
+  --text: #4b444f;
+  --paper-white: #fdfcf8; /* main backgroundcolor*/
+  --yellow: #d4af37;
+}
 
 h1 {
   font-size: 3rem;
