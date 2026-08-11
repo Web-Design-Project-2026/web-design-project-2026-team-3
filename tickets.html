@@ -6,10 +6,12 @@
     <title>Between The Lines</title>
 
     <!--Logo font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!--CSS files-->
     <link rel="stylesheet" href="CSS/header-footer.css" />
@@ -100,117 +102,121 @@
 
     <main>
       <div class="ticket-cards-container">
-       
-        <span class="subheader" aria-label="text: Secure your spot"
-          >SECURE YOUR SPOT</span
-        >
-        <h2>Ticket Options</h2>
-      </div>
+        <div class="hi-combo">
+          <span class="subheader" aria-label="text: Secure your spot"
+            >SECURE YOUR SPOT</span
+          >
+          <h2>Ticket Options</h2>
+        </div>
+</div>
         <div class="ticket-cards">
           <!--DAY 1-->
           <div class="ticket-card">
             <div class="ticket-texts">
-               <div class="card-header-row">
-              <h3 class="ticket-title">DAY 1 TICKET</h3>
-              <span class="badge-date" aria-label="Event date November 14th"
-                >NOV 14</span
-              >
+              <div class="card-header-row">
+                <h3 class="ticket-title">DAY 1 TICKET</h3>
+                <span class="badge-date" aria-label="Event date November 14th"
+                  >NOV 14</span
+                >
               </div>
               <p>Get access to all Day 1 activities, from 9:00 to 18:00</p>
               <p>$100.00</p>
             </div>
-             <button
-                class="btn-ticket"
-                onclick="
-                  addToCart({
-                    id: 'day1',
-                    name: 'DAY 1',
-                    description:
-                      'Get access to all Day 1 activities, from 9:00 to 18:00',
-                    price: 100.0,
-                  })
-                "
-              >
-                Add to cart <img
-            src="images/shopping-cart.svg"
-            alt="Shopping Cart icon"
-            id="Cart-icon"
-          />
-              </button>
+            <button
+              class="btn-ticket"
+              onclick="
+                addToCart({
+                  id: 'day1',
+                  name: 'DAY 1',
+                  description:
+                    'Get access to all Day 1 activities, from 9:00 to 18:00',
+                  price: 100.0,
+                })
+              "
+            >
+              Add to cart
+              <img
+                src="images/shopping-cart-white.svg"
+                alt="Shopping Cart icon"
+                id="Cart-icon"
+              />
+            </button>
           </div>
 
           <!--DAY 2-->
           <div class="ticket-card">
-            
             <div class="ticket-texts">
               <div class="card-header-row">
-              <h3 class="ticket-title">DAY 2 TICKET</h3>
-              <span class="badge-date" aria-label="Event date November 15th"
-                >NOV 15</span
-              >
+                <h3 class="ticket-title">DAY 2 TICKET</h3>
+                <span class="badge-date" aria-label="Event date November 15th"
+                  >NOV 15</span
+                >
               </div>
               <p>Get access to all Day 2 activities, from 9:00 to 18:00</p>
               <p>$100.00</p>
-               </div>
-              <button
-                class="btn-ticket"
-                onclick="
-                  addToCart({
-                    id: 'day2',
-                    name: 'DAY 2',
-                    description:
-                      'Get access to all Day 2 activities, from 9:00 to 18:00',
-                    price: 100.0,
-                    image: 'images/day2.png',
-                  })
-                "
-              >
-                Add to cart <img
-            src="images/shopping-cart.svg" alt="Shopping Cart icon"
-            id="Cart-icon" />
-              </button>
-           
+            </div>
+            <button
+              class="btn-ticket"
+              onclick="
+                addToCart({
+                  id: 'day2',
+                  name: 'DAY 2',
+                  description:
+                    'Get access to all Day 2 activities, from 9:00 to 18:00',
+                  price: 100.0,
+                  image: 'images/day2.png',
+                })
+              "
+            >
+              Add to cart
+              <img
+                src="images/shopping-cart-white.svg"
+                alt="Shopping Cart icon"
+                id="Cart-icon"
+              />
+            </button>
           </div>
 
           <!--DAY 1 & 2-->
-          
+
           <div class="ticket-card ticket-card--recommended">
             <span
-                class="badge-recommended"
-                aria-label="Recommended ticket option"
-                >RECOMMENDED</span
-              >
-          
+              class="badge-recommended"
+              aria-label="Recommended ticket option"
+              >RECOMMENDED</span
+            >
+
             <div class="ticket-texts">
               <div class="card-header-row">
-      
-              <h3 class="ticket-title">DAY 1 AND 2 TICKET PACKAGE </h3>
-             </div>
+                <h3 class="ticket-title">DAY 1 AND 2 TICKET PACKAGE</h3>
+              </div>
               <p>
                 Get access to all Day 1 and Day 2 activities, from 9:00 to
                 18:00. Get the special event kit that contains a tote bag, book
                 separator and participate in the raffle to win a book nook.
               </p>
               <p>$170.00</p>
-               </div>
-              <button
-                class="btn-ticket"
-                onclick="
-                  addToCart({
-                    id: 'day1and2',
-                    name: 'DAY 1 & 2',
-                    description:
-                      'Get access to all Day 1 and Day 2 activities, from 9:00 to 18:00. Get the special event kit that contains a tote bag, book separator and participate in the raffle to win a book nook.',
-                    price: 170.0,
-                  })
-                "
-              >
-                Add to cart <img
-            src="images/shopping-cart.svg" alt="Shopping Cart icon"
-            id="Cart-icon"/>   
-                </button>
+            </div>
+            <button
+              class="btn-ticket"
+              onclick="
+                addToCart({
+                  id: 'day1and2',
+                  name: 'DAY 1 & 2',
+                  description:
+                    'Get access to all Day 1 and Day 2 activities, from 9:00 to 18:00. Get the special event kit that contains a tote bag, book separator and participate in the raffle to win a book nook.',
+                  price: 170.0,
+                })
+              "
+            >
+              Add to cart
+              <img
+                src="images/shopping-cart-white.svg"
+                alt="Shopping Cart icon"
+                id="Cart-icon"
+              />
+            </button>
           </div>
-          
         </div>
       </div>
     </main>

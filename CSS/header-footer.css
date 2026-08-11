@@ -26,7 +26,83 @@
   --yellow: #d4af37; /* ticket pg*/
   --gold: #d4af37;
 }
+:root {
+  h1 {
+    font-size: 3rem;
+    line-height: normal;
+    color: var(--paper-white);
+  }
 
+  body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--text);
+    overflow-x: hidden;
+    font-size: 100% /* base size */;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; /* 200% */
+    letter-spacing: 0.03125rem;
+    gap: 0.5rem;
+  }
+  .subheader {
+    align-self: stretch;
+    color: var(--yellow);
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem; /* 142.857% */
+    letter-spacing: 0.0875rem;
+    text-transform: uppercase;
+    padding-bottom: 0.25rem;
+  }
+  .badge-date {
+    border-radius: 0.75rem;
+    background: var(--nav-on, var(--yellow));
+    color: var(--paper-white);
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem; /* 142.857% */
+    letter-spacing: 0.04375rem;
+    display: flex;
+    width: 5.53356rem;
+    height: 1.75rem;
+    padding: 0.25rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: Fraunces;
+  }
+
+  h2 {
+    align-self: stretch;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.5rem; /* 116.667% */
+    padding-bottom: 2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 2.5rem; /* 125% */
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .ticket-card p {
+    line-height: 2rem;
+  }
+}
 a {
   text-decoration: none;
   color: inherit;
