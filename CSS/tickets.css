@@ -117,7 +117,7 @@ main {
 .ticket-card--recommended {
   position: relative;
   border-color: var(--yellow);
-  margin-top: 0.75rem;
+  display: inline-flex;
 }
 .badge-recommended {
   position: absolute;
@@ -129,7 +129,7 @@ main {
 
   padding: 0.25rem 1rem;
 
-  color: var(--white);
+  color: var(--paper-white);
   font-family: Montserrat;
   font-size: 0.75rem;
   font-style: normal;
@@ -151,6 +151,7 @@ main {
   flex-direction: column;
   flex: 1;
   min-width: 0;
+  max-width: 38.25rem;
 }
 
 .btn-ticket {
@@ -163,7 +164,7 @@ main {
   justify-content: center;
 
   background: var(--purple);
-  color: var(--white);
+  color: var(--paper-white);
   border: none;
   border-radius: 0.25rem;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -205,51 +206,19 @@ main {
 
 /* RESPONSIVENESS FOR MOBILE */
 @media (max-width: 760px) {
-  .subheader {
-    justify-content: center;
-    text-align: center;
-    font-size: 0.875rem;
-    line-height: 1.25rem; /* 142.857% */
-    letter-spacing: 0.0875rem;
-  }
-  h2 {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
-  h3 {
-    font-size: 2rem;
-    line-height: 2.5rem; /* 125% */
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 2rem; /* 200% */
-    letter-spacing: 0.03125rem;
-  }
-  main {
-    padding: 1.5625rem 1rem;
-    justify-items: center;
-  }
-
   .ticket-cards-container {
     gap: 2.1875rem;
   }
-  .date-badge {
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.25rem; /* 142.857% */
-    letter-spacing: 0.04375rem;
-    align-items: flex-start;
+  .hi-combo {
+    gap: 0;
   }
   .ticket-card {
     display: flex;
     flex-direction: column;
-    width: 80vw;
     align-items: flex-start;
   }
 
   .btn-ticket {
-    color: #fff;
     font-family: Montserrat;
     font-size: 1rem;
     font-style: normal;
