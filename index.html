@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Between The Lines</title>
+
+    <!--Logo font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--CSS FILES-->
+
+    <!--General one ( header and footer for all pages )-->
+    <link rel="stylesheet" href="CSS/header-footer.css" />
+    <!--Page-specific ( home )-->
+    <link rel="stylesheet" href="CSS/home.css" />
+
+    <!--JS files-->
+    <script src="JS/mainpage-mobilemenu.js" defer></script>
+    <script src="JS/slideShow.js" defer></script>
+    <script src="JS/countdown.js" defer></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a
+          href="index.html"
+          class="nav-logo"
+          aria-label="Between the Lines, Home"
+          ><img
+            src="images/main-logotype-and-icon 1.svg"
+            alt="Logo"
+            class="logo-desktop"
+          />
+
+          <!-- mobile brandmark -->
+          <img
+            src="images/smallIcon.png"
+            alt="Between the Lines brandmark"
+            class="logo-mobile"
+          />
+        </a>
+
+        <!-- Desktop version links -->
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+        </ul>
+
+        <!-- Desktop cart -->
+        <a href="shoppingCart.html" class="nav-cart" aria-label="Shopping cart"
+          ><img
+            src="images/shopping-cart.svg"
+            alt="Shopping Cart icon"
+            id="Cart-icon"
+          />
+        </a>
+
+        <!-- Ham -->
+        <button
+          class="nav-hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          onclick="openMenu()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div
+      class="mobile-menu"
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+    >
+      <div class="mobile-menu-header">
+        <button
+          class="mobile-menu-close"
+          aria-label="Close menu"
+          onclick="closeMenu()"
+        >
+          ✕
+        </button>
+      </div>
+      <nav class="mobile-menu-links" aria-label="Mobile navigation">
+        <a href="index.html" onclick="closeMenu()">Home</a>
+        <a href="schedule.html" onclick="closeMenu()">Schedule</a>
+        <a href="tickets.html" onclick="closeMenu()">Tickets</a>
+        <a href="#contact" onclick="closeMenu()">Contact us</a>
+        <a href="shoppingCart.html" onclick="closeMenu()">Shopping cart</a>
+      </nav>
+    </div>
+
+    <!-- MAIN -->
+    <main>
+      <!-- Hero/main image -->
+      <section class="hero overlay" aria-label="Event photo">
+        <!-- the slides -->
+        <div class="slides">
+          <img
+            src="images/main.jpg"
+            alt="Event photo - Scene 1"
+            class="slide active"
+          />
+          <img
+            src="images/Main3.jpg"
+            alt="Event photo - Scene 2"
+            class="slide"
+          />
+          <img
+            src="images/Main4.jpg"
+            alt="Event photo - Scene 3"
+            class="slide"
+          />
+          <img
+            src="images/Main5.jpg"
+            alt="Event photo - Scene 4"
+            class="slide"
+          />
+        </div>
+
+        <!-- left and right arrow buttons -->
+        <button class="slide-btn slide-prev" aria-label="Previous image">
+          <
+        </button>
+        <button class="slide-btn slide-next" aria-label="Next image">></button>
+
+        <!-- dots at the bottom -->
+        <div class="slide-dots">
+          <button class="dot active" aria-label="Go to slide 1"></button>
+          <button class="dot" aria-label="Go to slide 2"></button>
+          <button class="dot" aria-label="Go to slide 3"></button>
+          <button class="dot" aria-label="Go to slide 4"></button>
+        </div>
+
+        <!-- text -->
+        <div class="text-on-slides">
+          <h1 class="light-text">Between the Lines</h1>
+          <p class="light-text">Between the Lines is an event for all book lovers with good vibes, good books and good activities. It is a great opportunity to meet new people, discover new genres and meet your favourite authors!</p>
+          <button aria-label="Go to Tickets page" class="dark btn-tickets">Get tickets <img src="" alt="Ticket icon" class="icon"></button>
+          <button aria-label="Go to Schedule page" class="secondary light btn-schedule">Explore schedule</button>
+        </div>
+      </section>
+
+      <!-- Countdown -->
+      <section class="countdown-section" aria-label="Countdown to event">
+        <h2 class="purple">The literary journey begins in...</h2>
+        <div class="countdown-grid" aria-live="polite">
+          <div class="countdown-item">
+            <span class="countdown-number" id="cd-days">00</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="cd-hours">00</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="cd-minutes">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Event highlights -->
+      <section class="events" aria-label="Events section">
+        <!-- headline -->
+        <section class="events-headline">
+          <h5>Featured Program</h5>
+          <h2>Event Highlights</h2>
+        </section>
+        <!-- Day cards -->
+        <section class="day-cards" aria-label="Event days">
+          <!-- Day 1 -->
+          <article class="day-card">
+            <img
+              src="images/BOOK 2 3.png"
+              alt="Day 1 event scene – book stalls and visitors"
+            />
+            <h6>Nov 14</h6>
+            <div class="day-card-content">
+              <h3>DAY 1</h3>
+              <p>Summary of the day's events: Keynote speeches, initial author signings, and the grand opening ceremony in the main atrium.</p>
+              <button
+                class="btn-schedule"
+                onclick="window.location.href = 'schedule.html'"
+              >
+                SEE SCHEDULE
+              </button>
+            </div>
+          </article>
+
+          <!-- Day 2 -->
+          <article class="day-card">
+            <img
+              src="images/day2.png"
+              alt="Day 2 event scene – author signing and talks"
+            />
+            <h6>Nov 15</h6>
+            <div class="day-card-content">
+              <h3>DAY 2</h3>
+              <p>Summary of the day's events: In-depth workshops, genre-specific panels, and intimate roundtable discussions.</p>
+              <button
+                class="btn-schedule"
+                onclick="window.location.href = 'schedule.html'"
+              >
+                SEE SCHEDULE
+              </button>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <!-- Speakers -->
+      <section class="speakers" aria-label="Speakers section">
+        <h5>Our guest stars</h5>
+        <h2>Who's speaking?</h2>
+        <section class="speaker-cards" aria-label="Speakers">
+          <article class="speaker-card">
+            <img
+              src=""
+              alt="Elena Vance"
+            />
+            <div class="speaker-card-content">
+              <h5>Author</h5>
+              <h4>Elena Vance</h4>
+              <p>Award-winning novelist and winner of the 2025 Golden Quill for her exploration of architectural silence.</p>
+            </div>
+          </article>
+
+          <article class="speaker-card">
+            <img
+              src=""
+              alt="Marcus Thorne"
+            />
+            <div class="speaker-card-content">
+              <h5>Moderator</h5>
+              <h4>Marcus Thorne</h4>
+              <p>Renowned literary critic and host of 'The Modern Verse,' known for his incisive analysis of contemporary prose.</p>
+            </div>
+          </article>
+
+          <article class="speaker-card">
+            <img
+              src=""
+              alt="Sarah Jenkins"
+            />
+            <div class="speaker-card-content">
+              <h5>Poet</h5>
+              <h4>Sarah Jenkins</h4>
+              <p>Bestselling poet whose latest collection 'Rhythms of the Earth' debuted at #1 on the National Poetry Charts.</p>
+            </div>
+          </article>
+
+          <article class="speaker-card">
+            <img
+              src=""
+              alt="David Chen"
+            />
+            <div class="speaker-card-content">
+              <h5>Journalist</h5>
+              <h4>David Chen</h4>
+              <p>Some description.</p>
+            </div>
+          </article>
+
+          <article class="speaker-card">
+            <img
+              src=""
+              alt="Amara Okoro"
+            />
+            <div class="speaker-card-content">
+              <h5>Novelist</h5>
+              <h4>Amara Okoro</h4>
+              <p>Some description.</p>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <section class="vibes-container" aria-label="Vibes moodboard">
+        <div class="vibes-texts">
+          <h5>Experience</h5>
+          <h2>The Vibe</h2>
+          <div class="vibes-descriptions">
+            <p>Immerse yourself in a space designed for discovery.</p>
+            <p>From quiet reading corners to buzzing author panels.</p>
+          </div>
+        </div>
+        <div class="vibes-visuals">
+          <img class="vibes-main" src="" alt="People sitting around a table with books in their hands.">
+          <img class="vibes-small" src="" alt="People standing around a table reading exhibited books.">
+          <div class="vibes-quote">
+            <img class="icon" src="" alt="Book icon">
+            <p class="light-text quote">"A book is a dream that you hold in your hand."</p>
+            <p class="light-text quote-by">— Neil Gaiman</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ticket call-to-action -->
+       <section class="buy-tickets" aria-label="Buy tickets">
+        <h2>Every story needs an audience</h2>
+        <p>Tickets are selling fast.</p>
+        <p>Secure your place and experience the magic of literature in person.</p>
+        <button class="btn-tickets" aria-label="Go to Tickets page">Buy your tickets <img src="" alt="Ticket icon"></button>
+       </section>
+       
+       <!-- Contact Us form -->
+        <section class="contact-section">
+          <h5>Get in touch</h5>
+          <h2>Contact Us</h2>
+          <p>Have questions about the festival? We're here to help.</p>
+          <form action="" method="get" class="contact-form">
+            <div class="name-field">
+              <label for="full-name">Full Name</label>
+              <input type="text" name="name" id="name" placeholder="Your name" required />
+            </div>
+            <div class="email-field">
+              <label for="email">Email Address</label>
+              <input type="email" name="email" id="email" placeholder="Your email address" required />
+            </div>
+            <div class="msg-field">
+              <label for="message">Your Message</label>
+              <input type="text" name="message" id="message" placeholder="How can we help?" required />
+            </div>
+            <button type="submit" id="msg-btn">Send message</button>
+          </form>
+        </section>
+
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+      <div class="footer-inner">
+        <nav class="footer-links" aria-label="Footer navigation">
+          <div class="footer-col">
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="#contact">Contact us</a>
+          </div>
+          <div class="footer-col footer-col-right">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <span class="footer-copyright">©Between the Lines, 2026.</span>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

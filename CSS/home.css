@@ -1,0 +1,581 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-weight: 500;
+}
+main {
+  background-color: color-mix(in srgb, var(--text) 2%, transparent);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fraunces", serif;
+  width: max-content;
+}
+
+h2, h3, h4 {
+  color: var(--purple);
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 550;
+  font-family: "Montserrat", sans-serif;
+}
+
+.light-text {
+  color: var(--beige-light);
+}
+
+.text-on-slides p{
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  width: 50%;
+}
+
+.purple {
+  color: var(--purple);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* HERO SLIDESHOW */
+.hero {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+.hero img {
+  height: 300px;
+}
+
+/* all slides sit on top of each other, hidden by default */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* ARROW BUTTONS */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.35);
+  color: white;
+  border: none;
+  font-size: 1.4rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+}
+
+.slide-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.slide-prev {
+  left: 0.8rem;
+}
+.slide-next {
+  right: 0.8rem;
+}
+
+/* DOTS */
+.slide-dots {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.4rem;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* TEXT ON SLIDES */
+.text-on-slides {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%) translateX(-25%);
+  z-index: 10;
+}
+
+.secondary, .light, .dark {
+  height: max-content;
+  padding: 8px;
+}
+
+.icon {
+  max-height: 15px;
+}
+
+/*ABOUT SECTION*/
+
+
+.events-headline h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.events-headline p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* COUNTDOWN */
+.countdown-section {
+  text-align: center;
+  padding: 1.5rem 1rem 3rem;
+  justify-items: center;
+  background-color: var(--beige-mid);
+}
+
+.countdown-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-number {
+  font-family: "Fraunces";
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--purple);
+}
+
+.countdown-label {
+  font-size: auto;
+  /* color: color-mix(in srgb, var(--text) 85%, transparent); */
+  color: var(--purple);
+  margin-top: 0.2rem;
+}
+
+/* EVENT HIGHLIGHTS */
+.events {
+  /* justify-items: center; */
+  margin-left: 2rem;
+  background-color: var(--beige-light);
+}
+
+.events-headline {
+  max-width: 90%;
+  /* margin: 0 auto; */
+  padding: 2.5rem 1.5rem 1.5rem 0;
+  text-align: center;
+}
+
+
+/* Day Cards*/
+/* fix color, shadow, button later*/
+.day-cards {
+  max-width: 90%;
+  /* margin: 1.5rem auto;
+  padding: 0 1.5rem; */
+  display: flex;
+  gap: 1.2rem;
+}
+
+.day-card {
+  background: var(--white);
+  border: 1px solid var(--gray-mid);
+  border-radius: 6px;
+  display: grid;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  grid-template-columns: 2fr 3fr;
+}
+
+.day-card img {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  grid-area: 1 / 1;
+  align-self: flex-start;
+}
+
+h6 {
+  grid-area: 1 / 1;
+  align-self: flex-start;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--beige-light);
+  background-color: var(--purple);
+  padding: 3px 10px;
+  margin: 0.5rem;
+  border-radius: 10px;
+}
+
+.day-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  flex: 1;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.day-card-content h3 {
+  font-size: 1.5rem;
+
+  margin: 0;
+}
+
+.day-card-content p {
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--text) 85%, transparent);
+  margin-bottom: 0.7rem;
+}
+
+.btn-schedule {
+  background: var(--purple);
+  color: var(--white);
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background 0.2s;
+  align-self: bottom;
+  margin-top: 0.3rem;
+}
+
+.btn-schedule:hover {
+  background: var(--purple-dark);
+}
+
+/* SPEAKERS SECTION */
+.speakers {
+  background-color: var(--beige-mid);
+  padding: 2rem;
+}
+
+.speaker-cards {
+  overflow-x: auto;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.speaker-card {
+  background: var(--white);
+  border: 1px solid var(--gray-mid);
+  border-radius: 6px;
+  display: grid;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  grid-template-rows: 3fr 2fr;
+  min-width: 35vw;
+  max-width: 45vw;
+  justify-items: center;
+}
+
+.speaker-card img {
+  height: 40vh;
+}
+
+.speaker-card-content {
+  max-width: 80%;
+  justify-items: center;
+}
+
+.speaker-card-content p {
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* VIBES SECTION */
+
+.vibes-container {
+  background-color: var(--beige-light);
+  padding: 2rem;
+}
+
+.vibes-texts {
+  display: grid;
+  grid-template-areas: 
+    "a a"
+    "b c";
+  grid-template-columns: 3fr max-content;
+}
+
+.vibes-texts h5 {
+  grid-area: a;
+}
+
+.vibes-headlines {
+  display: flex;
+  flex-direction: row;
+}
+
+.vibes-visuals {
+  display: grid;
+  grid-template-areas:
+    "big big lil"
+    "big big quote";
+    grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.vibes-visuals img {
+  border-style: dashed;
+  border-width: 1px;
+}
+
+.vibes-main {
+  grid-area: big;
+  height: 70vh;
+  border-radius: 15px;
+}
+
+.vibes-small {
+  grid-area: lil;
+  border-radius: 15px;
+}
+
+.vibes-quote {
+  grid-area: quote;
+  background-color: var(--purple);
+  align-content: center;
+  justify-items: center;
+  border-radius: 15px;
+}
+
+.icon {
+  width: max-content;
+}
+
+.quote {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.3rem;
+  text-wrap: balance;
+  max-width: 70%;
+  text-align: center;
+}
+
+.quote-by {
+  font-weight: 300;
+  font-size: 0.75rem;
+  width: max-content;
+}
+
+/* BUY TICKETS SECTION */
+.buy-tickets {
+  background-color: var(--beige-mid);
+  justify-items: center;
+  padding: 3rem 0;
+  gap: 1.5rem;
+}
+
+.buy-tickets h2 {
+  margin-bottom: 1rem;
+}
+
+.buy-tickets p {
+  width: max-content;
+}
+
+.buy-tickets .btn-tickets {
+  display: block;
+  margin-top: 2rem;
+}
+
+.tickets-cta {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.btn-tickets {
+  display: inline-block;
+  background: var(--purple);
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.8rem 2.8rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-transform: uppercase;
+}
+
+.btn-tickets:hover {
+  background: var(--purple-dark);
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  justify-items: center;
+  padding: 2rem 0;
+}
+
+.contact-form {
+  width: 80vw;
+  border: 1px solid #F0EDED;
+  display: grid;
+  grid: 1fr 2fr 1fr / 1fr 1fr;
+  padding: 1.5rem 0;
+  gap: 1.8rem 0;
+  margin: 3rem 0;
+}
+
+label {
+  width: max-content;
+  color: var(--purple);
+  font-weight: 550;
+}
+
+form div {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  gap: 0.3rem 0;
+}
+
+.msg-field, #msg-btn {
+  grid-column: span 2;
+  width: 95%;
+  justify-self: center;
+}
+
+input {
+  height: 2.5rem;
+  width: 100%;
+}
+
+input::placeholder {
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+#message {
+  height: 8rem;
+}
+
+#msg-btn {
+  height: 2.5rem;
+  align-self: center;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--purple);
+  border-style: none;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+/* RESPONSIVENESS MOBILE */
+@media (max-width: 640px) {
+  .hero {
+    height: 240px;
+  }
+
+  .about h1,
+  .countdown-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .about p {
+    font-size: 0.88rem;
+  }
+
+  /* Cards& img stack vert */
+  .day-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .day-card img {
+    width: 100%;
+    height: 160px;
+  }
+}
