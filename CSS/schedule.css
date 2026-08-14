@@ -9,32 +9,68 @@ body {
 /* MAIN CONTENT */
 main {
   margin: 0%;
-  padding: 2%;
-  padding-left: 5%;
+  position: relative;
+  background-image: url(/images/PHOTOSCH.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   background-color: color-mix(in srgb, var(--text) 2%, transparent);
+}
+/* Title CONTAINER */
+.title-sch-parent {
+  margin-bottom: 3.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--paper-white);
+  flex-direction: column;
+  padding-top: 1.75rem;
+}
+
+.title-sch {
+  font-size: 4rem;
+  line-height: normal;
+  font-family: Fraunces;
+  color: var(--purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* DAY CONTAINERS */
 .day-1-parent,
 .day-2-parent {
-  margin-bottom: 3.75rem;
+  max-width: 60rem;
+  background-color: var(--white);
+  padding: 4rem;
+  margin-bottom: 5rem;
+}
+.day-2-parent {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 /* DAY TITLES */
 .day-title,
 .day2-title {
-  font-family: "EB Garamond", serif;
+  font-family: Fraunces;
   font-size: 2.25rem;
+  color: var(--purple);
+}
+
+.date {
+  font-size: 1 rem;
   margin-bottom: 1.5625rem;
+  color: var(--gold);
 }
 
 /* SCHEDULE ROW */
 .schedule-row {
   display: flex;
   align-items: flex-start;
-  gap: 1.25rem; /* 20px */
-  margin-bottom: 1.125rem; /* 18px */
-  border-bottom: 0.0625rem solid var(--gray-mid); /* 1px */
+  gap: 1.25rem;
+  margin-bottom: 1.125rem;
+  border-bottom: 0.0625rem solid var(--gold);
 }
 
 /* HOURS */
@@ -49,10 +85,26 @@ main {
   line-height: 1.8;
 }
 
-/* TICKETS BUTTON */
-.tickets-cta {
-  text-align: start;
-  padding: 2rem 1rem;
+/* BUY TICKETS SECTION */
+.buy-tickets {
+  background-color: var(--paper-white);
+  justify-items: center;
+  padding: 3rem 0;
+  gap: 1.5rem;
+}
+
+.buy-tickets h2 {
+  margin-bottom: 1rem;
+  color: var(--purple);
+}
+
+.buy-tickets p {
+  width: max-content;
+}
+
+.buy-tickets .btn-tickets {
+  display: block;
+  margin-top: 2rem;
 }
 
 .btn-tickets {
@@ -64,19 +116,36 @@ main {
   font-weight: 700;
   letter-spacing: 0.08em;
   padding: 0.8rem 2.8rem;
-  border-radius: 30px;
+  justify-content: center;
+  margin: 0;
   border: none;
   cursor: pointer;
   transition: background 0.2s;
   text-transform: uppercase;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .btn-tickets:hover {
   background: var(--purple-dark);
 }
+
 /*Responsive */
 /*TABLET */
 @media (max-width: 1024px) {
+  main {
+    margin: 0%;
+  }
+
+  body {
+    margin: 0%;
+  }
+
+  .title-sch-parent {
+    padding-top: 1.75rem;
+    display: flex;
+    padding-bottom: 1.75rem;
+  }
   h1 {
     font-size: 2rem;
     margin-bottom: 2.5rem;
@@ -86,6 +155,7 @@ main {
   .day2-title {
     font-size: 2rem;
     margin-bottom: 1.25rem;
+    padding: 1.5%;
   }
 
   .day-1-parent,
@@ -105,17 +175,17 @@ main {
   .description {
     font-size: 0.9375rem;
   }
-
-  .tickets-cta {
-    padding: 1.5rem 0.5rem;
-  }
 }
 
 /* Mobile*/
 @media (max-width: 600px) {
   main {
     margin: 0%;
-    padding: 4% 8%;
+  }
+  .title-sch-parent {
+    padding-top: 1.75rem;
+    display: flex;
+    padding-bottom: 1.75rem;
   }
 
   h1 {
@@ -153,13 +223,19 @@ main {
     line-height: 1.6;
   }
 
-  .tickets-cta {
+  .buy-tickets h2 {
+    width: max-content;
+    max-width: 19rem;
     text-align: center;
-    padding: 1.5rem 0;
   }
 
+  .buy-tickets p {
+    width: max-content;
+    max-width: 15rem;
+    text-align: center;
+  }
   .btn-tickets {
-    width: 100%;
+    width: 50%;
     text-align: center;
     padding: 0.85rem 1rem;
     font-size: 0.9375rem;
