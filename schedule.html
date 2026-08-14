@@ -4,19 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Between Lines</title>
+
     <!--Logo font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Montserrat:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <!--CSS files-->
     <link rel="stylesheet" href="CSS/header-footer.css" />
     <link rel="stylesheet" href="CSS/schedule.css" />
+
     <!--JS files-->
     <script src="JS/mainpage-mobilemenu.js" defer></script>
   </head>
   <body>
-    <!--HEADER-->
+    <!-- HEADER -->
     <header>
       <nav class="nav-inner" aria-label="Main navigation">
         <a
@@ -45,7 +49,7 @@
         </ul>
 
         <!-- Desktop cart -->
-        <a href="cart.html" class="nav-cart" aria-label="Shopping cart"
+        <a href="shoppingCart.html" class="nav-cart" aria-label="Shopping cart"
           ><img
             src="images/shopping-cart.svg"
             alt="Shopping Cart icon"
@@ -94,9 +98,16 @@
       </nav>
     </div>
     <main>
+      <!--TITLE-->
+      <section class="title-sch-parent">
+        <h4 class="date">EVENT ITINERARY</h4>
+        <h2 class="title-sch">The Festival Schedule</h2>
+      </section>
+
       <!--DAY 1-->
       <section class="day-1-parent">
-        <h2 class="day-title">DAY 1</h2>
+        <h2 class="day-title">Day 1</h2>
+        <h4 class="date">NOVEMBER 14TH</h4>
         <div class="schedule-row">
           <div class="hours">10:00</div>
           <div class="description">
@@ -155,7 +166,8 @@
       </section>
       <!--DAY 2-->
       <section class="day-2-parent">
-        <h2 class="day-title">DAY 2</h2>
+        <h2 class="day-title">Day 2</h2>
+        <h4 class="date">NOVEMBER 15TH</h4>
         <div class="schedule-row">
           <div class="hours">10:00</div>
           <div class="description">
@@ -204,9 +216,20 @@
           </div>
         </div>
       </section>
-      <!-- Tickets button -->
-      <section class="tickets-cta">
-        <a href="tickets.html" class="btn-tickets" role="button">TICKETS</a>
+      <!-- Ticket call-to-action -->
+      <section class="buy-tickets" aria-label="Buy tickets">
+        <h2>Every story needs an audience</h2>
+        <p>Tickets are selling fast.</p>
+        <p>
+          Secure your place and experience the magic of literature in person.
+        </p>
+        <button
+          class="btn-tickets"
+          onclick="window.location.href = 'tickets.html'"
+        >
+          Buy your tickets
+          <img class="icon-t" src="images/Tickets-icon.png" alt="Ticket icon" />
+        </button>
       </section>
     </main>
     <!--FOOTER-->
