@@ -79,8 +79,16 @@ img {
   overflow: hidden;
   position: relative;
 }
-.hero img {
+.slide {
   height: 300px;
+}
+
+#hero-overlay {
+  background: linear-gradient(0.25turn, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.3));
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  z-index: 10;
 }
 
 /* all slides sit on top of each other, hidden by default */
@@ -163,13 +171,18 @@ img {
   z-index: 10;
 }
 
+.tickets {
+  display: inline;
+  vertical-align: bottom;
+}
+
 .secondary, .light, .dark {
   height: max-content;
   padding: 8px;
 }
 
-.icon {
-  max-height: 15px;
+#hero-btns {
+  padding-top: 1rem;
 }
 
 /*ABOUT SECTION*/
@@ -228,7 +241,7 @@ img {
 /* EVENT HIGHLIGHTS */
 .events {
   /* justify-items: center; */
-  margin-left: 2rem;
+  margin: 0 2rem 4rem;
   background-color: var(--beige-light);
 }
 
@@ -243,7 +256,7 @@ img {
 /* Day Cards*/
 /* fix color, shadow, button later*/
 .day-cards {
-  max-width: 90%;
+  width: 100%;
   /* margin: 1.5rem auto;
   padding: 0 1.5rem; */
   display: flex;
@@ -309,23 +322,25 @@ h6 {
 }
 
 .btn-schedule {
-  background: var(--purple);
-  color: var(--white);
-  border: none;
-  border-radius: 20px;
-  padding: 0.4rem 1.1rem;
-  font-size: 0.8rem;
+  display: inline-block;
+  background: none;
+  color: var(--purple);
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: 3px solid var(--purple);
   cursor: pointer;
-  letter-spacing: 0.03em;
   transition: background 0.2s;
-  align-self: bottom;
-  margin-top: 0.3rem;
+  text-transform: uppercase;
 }
 
 .btn-schedule:hover {
   background: var(--purple-dark);
+  color: var(--white);
+  border-color: var(--purple-dark);
 }
 
 /* SPEAKERS SECTION */
@@ -353,6 +368,7 @@ h6 {
   max-width: 45vw;
   justify-items: center;
 }
+
 
 .speaker-card img {
   height: 40vh;
@@ -397,18 +413,19 @@ h6 {
   grid-template-areas:
     "big big lil"
     "big big quote";
-    grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
   gap: 1rem;
+  overflow: hidden;
+  max-height: 70vh;
 }
 
-.vibes-visuals img {
-  border-style: dashed;
-  border-width: 1px;
+.vibes-icon {
+  width: 2rem;
 }
 
 .vibes-main {
   grid-area: big;
-  height: 70vh;
   border-radius: 15px;
 }
 
@@ -425,9 +442,9 @@ h6 {
   border-radius: 15px;
 }
 
-.icon {
+/* .icon {
   width: max-content;
-}
+} */
 
 .quote {
   font-family: "Fraunces", serif;
@@ -461,7 +478,7 @@ h6 {
   width: max-content;
 }
 
-.buy-tickets .btn-tickets {
+.buy-tickets .rectangle-btn-tickets {
   display: block;
   margin-top: 2rem;
 }
@@ -485,6 +502,51 @@ h6 {
   cursor: pointer;
   transition: background 0.2s;
   text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.rectangle-btn-tickets {
+  display: inline-block;
+  background: var(--purple);
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-transform: uppercase;
+}
+
+.rectangle-btn-tickets:hover {
+  background: var(--purple-dark);
+}
+
+.hero-btn-schedule {
+  display: inline-block;
+  background: none;
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  border: 3px solid var(--white);
+  cursor: pointer;
+  transition: background 0.2s;
+  text-transform: uppercase;
+}
+
+.hero-btn-schedule:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.icon {
+  width: 20px;
 }
 
 .btn-tickets:hover {
@@ -551,6 +613,10 @@ input::placeholder {
   border-radius: 4px;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
+}
+
+#msg-btn:hover {
+  background-color: var(--purple-dark);
 }
 
 /* RESPONSIVENESS MOBILE */
