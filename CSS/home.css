@@ -272,6 +272,15 @@ img {
   gap: 1.2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   grid-template-columns: 2fr 3fr;
+  max-width: 50%;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease,
+              translate 0.2s ease;
+}
+
+.day-card:hover {
+  box-shadow: 0 10px 3px rgba(74, 38, 110, 0.1);
+  translate: 0 -6px;
 }
 
 .day-card img {
@@ -283,6 +292,14 @@ img {
   flex-shrink: 0;
   grid-area: 1 / 1;
   align-self: flex-start;
+  transition: height 0.2s ease,
+              object-fit 0.2s ease;
+}
+
+.day-card:hover img {
+  height: 110%;
+  object-fit: cover;
+  max-width: 100%;
 }
 
 h6 {
@@ -353,6 +370,8 @@ h6 {
   overflow-x: auto;
   display: flex;
   gap: 1.2rem;
+  height: 80vh;
+  padding-top: 1rem;
 }
 
 .speaker-card {
@@ -366,13 +385,30 @@ h6 {
   grid-template-rows: 3fr 2fr;
   min-width: 35vw;
   max-width: 45vw;
+  height: 100%;
   justify-items: center;
+  transition: box-shadow 0.2s ease,
+              translate 0.2s ease;
 }
 
+.speaker-card:hover {
+  box-shadow: 0 10px 3px rgba(74, 38, 110, 0.1);
+  height: 100%;
+  translate: 0 -6px;
+}
 
 .speaker-card img {
   height: 40vh;
+  transition: height 0.2s ease,
+              object-fit 0.2s ease;
 }
+
+.speaker-card:hover img {
+  height: 43vh;
+  object-fit: cover;
+  max-width: 100%;
+}
+
 
 .speaker-card-content {
   max-width: 80%;

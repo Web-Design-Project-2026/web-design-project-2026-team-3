@@ -181,6 +181,13 @@ header {
   height: 28px;
 }
 
+#active-menu {
+  color: var(--purple);
+  text-decoration: underline solid var(--gold) 2px;
+  text-underline-offset: 0.5rem;
+  font-weight: 700;
+}
+
 /* Ham(&hidden on desktop) */
 .nav-hamburger {
   grid-column: 3;
