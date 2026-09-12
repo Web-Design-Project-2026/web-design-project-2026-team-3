@@ -109,6 +109,51 @@
         </div>
 </div>
         <div class="ticket-cards">
+<!--DAY 1 & 2-->
+
+          <div class="ticket-card ticket-card--recommended">
+            <span
+              class="badge-recommended"
+              aria-label="Recommended ticket option"
+              >RECOMMENDED</span
+            >
+
+            <div class="ticket-texts">
+              <div class="card-header-row">
+                <h3 class="ticket-title">DAY 1 AND 2 TICKET PACKAGE</h3>
+              </div>
+              <p>
+                Get access to all Day 1 and Day 2 activities, from 9:00 to
+                18:00. Get the special event kit that contains a tote bag, book
+                separator and participate in the raffle to win a book nook.
+              </p>
+              <p>$170.00</p>
+            </div>
+            <button
+              class="btn-ticket"
+              onclick="
+                addToCart({
+                  id: 'day1and2',
+                  name: 'DAY 1 & 2',
+                  description:
+                    'Get access to all Day 1 and Day 2 activities, from 9:00 to 18:00. Get the special event kit that contains a tote bag, book separator and participate in the raffle to win a book nook.',
+                  price: 170.0,
+                })
+              "
+            >
+              Add to cart
+              <img
+                src="images/shopping-cart-white.svg"
+                alt="Shopping Cart icon"
+                id="Cart-icon"
+              />
+            </button>
+          </div>
+
+
+
+
+
           <!--DAY 1-->
           <div class="ticket-card">
             <div class="ticket-texts">
@@ -164,47 +209,6 @@
                     'Get access to all Day 2 activities, from 9:00 to 18:00',
                   price: 100.0,
                   image: 'images/day2.png',
-                })
-              "
-            >
-              Add to cart
-              <img
-                src="images/shopping-cart-white.svg"
-                alt="Shopping Cart icon"
-                id="Cart-icon"
-              />
-            </button>
-          </div>
-
-          <!--DAY 1 & 2-->
-
-          <div class="ticket-card ticket-card--recommended">
-            <span
-              class="badge-recommended"
-              aria-label="Recommended ticket option"
-              >RECOMMENDED</span
-            >
-
-            <div class="ticket-texts">
-              <div class="card-header-row">
-                <h3 class="ticket-title">DAY 1 AND 2 TICKET PACKAGE</h3>
-              </div>
-              <p>
-                Get access to all Day 1 and Day 2 activities, from 9:00 to
-                18:00. Get the special event kit that contains a tote bag, book
-                separator and participate in the raffle to win a book nook.
-              </p>
-              <p>$170.00</p>
-            </div>
-            <button
-              class="btn-ticket"
-              onclick="
-                addToCart({
-                  id: 'day1and2',
-                  name: 'DAY 1 & 2',
-                  description:
-                    'Get access to all Day 1 and Day 2 activities, from 9:00 to 18:00. Get the special event kit that contains a tote bag, book separator and participate in the raffle to win a book nook.',
-                  price: 170.0,
                 })
               "
             >

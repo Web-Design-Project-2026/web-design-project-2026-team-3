@@ -217,7 +217,9 @@ main {
     flex-direction: column;
     align-items: flex-start;
   }
-
+  .ticket-card--recommended {
+    margin-top: 1.2rem;
+  }
   .btn-ticket {
     font-family: Montserrat;
     font-size: 1rem;
