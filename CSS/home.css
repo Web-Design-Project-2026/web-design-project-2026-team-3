@@ -18,7 +18,9 @@ h6 {
   width: max-content;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   color: var(--purple);
   font-weight: 500;
 }
@@ -47,7 +49,7 @@ h5 {
   color: var(--beige-light);
 }
 
-.text-on-slides p{
+.text-on-slides p {
   font-weight: 400;
   font-size: 0.8rem;
   line-height: 1.4;
@@ -84,7 +86,11 @@ img {
 }
 
 #hero-overlay {
-  background: linear-gradient(0.25turn, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.3));
+  background: linear-gradient(
+    0.25turn,
+    rgba(0, 0, 0, 0.6),
+    rgba(255, 255, 255, 0.3)
+  );
   position: absolute;
   width: 100%;
   height: 300px;
@@ -176,7 +182,9 @@ img {
   vertical-align: bottom;
 }
 
-.secondary, .light, .dark {
+.secondary,
+.light,
+.dark {
   height: max-content;
   padding: 8px;
 }
@@ -186,7 +194,6 @@ img {
 }
 
 /*ABOUT SECTION*/
-
 
 .events-headline h1 {
   font-size: 2.2rem;
@@ -252,7 +259,6 @@ img {
   text-align: center;
 }
 
-
 /* Day Cards*/
 /* fix color, shadow, button later*/
 .day-cards {
@@ -274,8 +280,9 @@ img {
   grid-template-columns: 2fr 3fr;
   max-width: 50%;
   overflow: hidden;
-  transition: box-shadow 0.2s ease,
-              translate 0.2s ease;
+  transition:
+    box-shadow 0.2s ease,
+    translate 0.2s ease;
 }
 
 .day-card:hover {
@@ -292,8 +299,9 @@ img {
   flex-shrink: 0;
   grid-area: 1 / 1;
   align-self: flex-start;
-  transition: height 0.2s ease,
-              object-fit 0.2s ease;
+  transition:
+    height 0.2s ease,
+    object-fit 0.2s ease;
 }
 
 .day-card:hover img {
@@ -390,8 +398,9 @@ h6 {
   min-height: max-content;
   max-height: 100%;
   justify-items: center;
-  transition: box-shadow 0.2s ease,
-              translate 0.2s ease;
+  transition:
+    box-shadow 0.2s ease,
+    translate 0.2s ease;
 }
 
 .speaker-card:hover {
@@ -412,15 +421,15 @@ h6 {
 .speaker-card img {
   /* height: 40vh; */
   width: 100%;
-  transition: scale 0.2s ease,
-              object-fit 0.2s ease;
+  transition:
+    scale 0.2s ease,
+    object-fit 0.2s ease;
 }
 
 .speaker-card:hover img {
   scale: 1.1;
   object-fit: cover;
 }
-
 
 .speaker-card-content {
   max-width: 30vw;
@@ -442,7 +451,7 @@ h6 {
 
 .vibes-texts {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "a a"
     "b c";
   grid-template-columns: 3fr max-content;
@@ -509,7 +518,7 @@ h6 {
   width: max-content;
 } */
 
-.quote {
+#quote {
   font-family: "Fraunces", serif;
   font-style: italic;
   font-weight: 300;
@@ -624,7 +633,7 @@ h6 {
 
 .contact-form {
   width: 80vw;
-  border: 1px solid #F0EDED;
+  border: 1px solid #f0eded;
   display: grid;
   grid: 1fr 2fr 1fr / 1fr 1fr;
   padding: 1.5rem 0;
@@ -646,7 +655,8 @@ form div {
   gap: 0.3rem 0;
 }
 
-.msg-field, #msg-btn {
+.msg-field,
+#msg-btn {
   grid-column: span 2;
   width: 95%;
   justify-self: center;
@@ -682,15 +692,155 @@ input::placeholder {
   background-color: var(--purple-dark);
 }
 
+/* RESPONSIVENESS TABLET */
+@media (max-width: 1024px) and (min-width: 641px) {
+  #slides-title {
+    font-size: 2rem;
+  }
+
+  .text-on-slides {
+    left: 30%;
+  }
+
+  .text-on-slides p {
+    width: 80%;
+  }
+
+  .rectangle-btn-tickets,
+  .hero-btn-schedule {
+    padding: 0.6rem 1rem;
+  }
+
+  .day-cards {
+    flex-direction: column;
+  }
+
+  .day-card {
+    max-width: 100%;
+  }
+
+  .btn-schedule {
+    align-self: center;
+    padding: 0.8rem;
+    width: 100%;
+  }
+
+  .vibes-texts {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .vibes-descriptions p {
+    font-size: 0.8rem;
+    width: max-content;
+    justify-self: right;
+  }
+
+  .vibes-main,
+  .vibes-small {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  .vibes-icon {
+    width: 1.5rem;
+  }
+
+  #quote {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .quote-by {
+    font-size: 0.5rem;
+  }
+
+  .buy-tickets h2,
+  p {
+    max-width: 95%;
+  }
+
+  .buy-tickets h2 {
+    font-size: 2.5rem;
+  }
+
+  #tickets-cta-btn {
+    width: 60%;
+    padding: 1.5rem;
+  }
+}
+
 /* RESPONSIVENESS MOBILE */
 @media (max-width: 640px) {
+  main {
+    padding: 0;
+  }
+
   .hero {
-    height: 240px;
+    height: 60vh;
+  }
+
+  #hero-overlay {
+    height: 60vh;
+    background: linear-gradient(
+      1turn,
+      rgba(0, 0, 0, 0.6),
+      rgba(255, 255, 255, 0.3)
+    );
+  }
+
+  .text-on-slides {
+    top: 60%;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  #slides-title {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+
+  .text-on-slides p {
+    width: 100%;
+  }
+
+  #hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .rectangle-btn-tickets,
+  .hero-btn-schedule {
+    padding: 1rem;
+  }
+
+  .slide-btn {
+    opacity: 0;
+  }
+
+  .countdown-section {
+    max-width: 100%;
+  }
+
+  .countdown-grid {
+    gap: 4rem;
+    max-width: 100%;
+  }
+
+  .countdown-item {
+    max-width: 100%;
   }
 
   .about h1,
+  .countdown-section h2,
+  .countdown-number {
+    font-size: 1.6rem;
+  }
+
   .countdown-section h2 {
-    font-size: 1.7rem;
+    max-width: 95%;
   }
 
   .about p {
@@ -698,13 +848,118 @@ input::placeholder {
   }
 
   /* Cards& img stack vert */
-  .day-card {
+
+  .events {
+    justify-items: center;
+  }
+
+  .events-headline {
+    justify-items: center;
+    padding-right: 0;
+  }
+
+  .events-headline h2 {
+    width: 100%;
+  }
+
+  .day-cards {
     flex-direction: column;
-    align-items: flex-start;
+  }
+
+  .day-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 100%;
+    height: 60vh;
   }
 
   .day-card img {
     width: 100%;
-    height: 160px;
+    max-height: 50%;
+    flex-shrink: 1;
+  }
+
+  h6 {
+    position: absolute;
+    left: 10%;
+  }
+
+  .day-card-content {
+    align-self: flex-start;
+  }
+
+  .btn-schedule {
+    align-self: center;
+    padding: 0.8rem;
+    width: 100%;
+  }
+
+  .vibes-texts {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .vibes-texts h2 {
+    font-size: 2.5rem;
+  }
+
+  .vibes-descriptions p {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .vibes-visuals {
+    display: grid;
+    grid-template-areas:
+      "big lil"
+      "quote quote";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vibes-main,
+  .vibes-small {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  #quote {
+    font-size: 1.5rem;
+    max-width: 90%;
+    line-height: normal;
+  }
+
+  .quote-by {
+    font-size: 0.5rem;
+    padding: 0.2rem 0;
+  }
+
+  .buy-tickets h2,
+  .buy-tickets p {
+    max-width: 95%;
+    text-align: center;
+  }
+
+  #tickets-cta-btn {
+    width: 60%;
+    padding: 1.5rem;
+  }
+
+  .contact-section p {
+    text-align: center;
+    width: 90%;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .msg-field,
+  #msg-btn {
+    width: 90%;
   }
 }
